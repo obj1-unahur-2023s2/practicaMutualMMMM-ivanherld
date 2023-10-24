@@ -1,0 +1,23 @@
+import viajes.*
+
+describe "Excursión a ciudad"{
+
+  const viaje1= new ExcursionACiudad( idioma = "español" , atracciones = 4)
+  const viaje2= new ExcursionACiudadTropical( idioma = "español" , atracciones = 4)
+  const viaje3= new ExcursionACiudad( idioma = "español" , atracciones = 8)
+  const viaje4= new ExcursionACiudadTropical( idioma = "español" , atracciones = 8)
+  const viaje5= new ExcursionACiudadTropical( idioma = "español" , atracciones = 10)
+  
+  test "Una excursion a ciudad normal, con 4 atracciones lleva 2 dias"{
+  	assert.equals(2,viaje1.cuantosDias())
+  }
+  
+   test "Una excursion a ciudad normal, con 4 atracciones no implica esfuerzo"{
+  	assert.notThat(viaje1.implicaEsfuerzo())
+  }
+  
+   test "Una excursion a ciudad normal, con 4 atracciones no sirve para broncearse"{
+  	assert.notThat(viaje1.sirveParaBroncearse())
+  }
+  
+  }
